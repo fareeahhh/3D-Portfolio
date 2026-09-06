@@ -1,5 +1,5 @@
 // 32:00
-import words from '../constants/index.js';
+import { words } from '../constants/index.js';
 
 const Hero = () => {
     return (
@@ -17,8 +17,8 @@ const Hero = () => {
                                 Shaping
                                 <span className="slide">
                                     <span className="wrapper">
-                                        {words.map((word) => (
-                                            <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
+                                        {words.map((word, index) => (
+                                            <span key={index} className="flex items-center md:gap-3 gap-1 pb-2">
                                                 <img 
                                                     src={word.imgPath} 
                                                     alt={word.text}
